@@ -1,100 +1,182 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>انضمي إلى مشروعك الخاص</title>
-    <!-- Tailwind CSS للتصميم العصري -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>فريق فيرونا - المنتجات وفرص العمل</title>
     <style>
-        body { font-family: 'Cairo', sans-serif; }
+        :root {
+            --primary-color: #e91e63;
+            --secondary-color: #25d366;
+            --dark-color: #1a1a1a;
+            --light-bg: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Hero Header */
+        header {
+            background: linear-gradient(rgba(233, 30, 99, 0.5), rgba(0, 0, 0, 0.6)), url('hero-verona.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-color);
+            margin-top: 45px;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: contain;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .product-card h3 {
+            color: var(--primary-color);
+            margin: 15px 0 5px;
+        }
+
+        /* Video Box */
+        .video-box {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .video-box video {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        /* CTA Button */
+        .cta-btn {
+            display: block;
+            width: 85%;
+            max-width: 320px;
+            margin: 30px auto;
+            padding: 15px;
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--dark-color);
+            color: white;
+            margin-top: 50px;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased">
+<body>
 
-    <!-- شريط التنبيه العلوي -->
-    <div class="bg-gradient-to-r from-pink-600 to-purple-600 text-white text-xs sm:text-sm py-2 px-4 text-center font-bold">
-        ✨ مقاعد محدودة لدورة هذا الشهر — سارعي بالتسجيل وحققي استقلالك المالي من منزلك!
-    </div>
-
-    <!-- القسم الرئيسي (Hero Section) -->
-    <header class="max-w-5xl mx-auto px-4 py-12 text-center">
-        <span class="inline-block bg-pink-100 text-pink-700 font-semibold text-sm px-4 py-1.5 rounded-full mb-4">
-            ✦ فرصة حقيقية لكل امرأة طموحة ✦
-        </span>
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-            ابدئي مشروعك الخاص <span class="text-pink-600">من المنزل</span> وبأرباح ممتازة
-        </h1>
-        <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            معكِ خطوة بخطوة لتحقيق استقلالك المادي بدون الحاجة لخبرة مسبقة، ومع مواكبة شاملة ودعم مستمر طيلة مسيرتك.
-        </p>
-        
-        <!-- زر الاتصال بالواتساب -->
-        <a href="https://wa.me/212674413270?text=مرحباً،%20أرغب%20في%20الانضمام%20ومعرفة%20التفاصيل" target="_blank" 
-           class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3.5 px-8 rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5">
-            💬 تواصل معنا عبر الواتساب مباشرة
-        </a>
-
-        <!-- ضمانات -->
-        <div class="flex flex-wrap justify-center gap-6 mt-8 text-xs sm:text-sm text-gray-500 font-medium">
-            <span>🔒 تسجيل آمن 100%</span>
-            <span>🎓 تكوين ومواكبة مجانية</span>
-            <span>⚡ بدون التزامات مسبقة</span>
-        </div>
+    <header>
+        <h1>✨ انضمي إلى فريقنا مع فيرونا</h1>
+        <p>استقلالية مالية، عمل مرن من المنزل، ومنتجات تجميل وصحة عالية الجودة</p>
     </header>
 
-    <!-- الإحصائيات -->
-    <section class="bg-white border-y border-gray-100 py-8">
-        <div class="max-w-4xl mx-auto px-4 grid grid-cols-3 gap-4 text-center">
-            <div>
-                <div class="text-2xl sm:text-4xl font-extrabold text-pink-600">+500</div>
-                <div class="text-xs sm:text-sm text-gray-500 mt-1">عضوة ناجحة</div>
+    <div class="container">
+
+        <a href="https://api.whatsapp.com/send?phone=212674413270&text=مرحباً،%20بغيت%20نعرف%20معلومات%20أكثر%20على%20المنتجات%20والعمل" class="cta-btn" target="_blank">
+            💬 تواصل معنا فواتساب دابا
+        </a>
+
+        <h2 class="section-title">🛍️ كـاتـالـوج المنتجات المميزة</h2>
+        <div class="products-grid">
+
+            <div class="product-card">
+                <img src="gel-balm.jpg" alt="جل بلسم كستناء الحصان للدوالي" onclick="window.open(this.src)">
+                <h3>جل بلسم 2 في 1 (كستناء الحصان)</h3>
+                <p>مخصص لتخفيف إجهاد الساقين، علاج الدوالي، وتنشيط الدورة الدموية.</p>
             </div>
-            <div>
-                <div class="text-2xl sm:text-4xl font-extrabold text-pink-600">100%</div>
-                <div class="text-xs sm:text-sm text-gray-500 mt-1">دعم ومواكبة</div>
+
+            <div class="product-card">
+                <img src="facial-wash.jpeg" alt="غسول يومي منظف للوجه">
+                <h3>غسول الوجه اليومي (Green Pharmacy)</h3>
+                <p>بخلاصة الشاي الأخضر والجنكة لراحة ونظافة البشرة المختلطة والدهنية.</p>
             </div>
-            <div>
-                <div class="text-2xl sm:text-4xl font-extrabold text-pink-600">0 دك</div>
-                <div class="text-xs sm:text-sm text-gray-500 mt-1">خبرة مطلوبة</div>
+
+            <div class="product-card">
+                <img src="hair-care.jpeg" alt="مجموعة العناية بالشعر ضد التساقط">
+                <h3>مجموعة العناية بالشعر وتساقطه</h3>
+                <p>شامبو وبخاخ زيت الأرقطيون والبصل لمحاربة التساقط وتحفيز النمو.</p>
             </div>
+
         </div>
-    </section>
 
-    <!-- مميزات الانضمام -->
-    <section class="max-w-5xl mx-auto px-4 py-16">
-        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-10">لماذا تنضمين إلى فريقنا؟</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                <div class="text-3xl mb-3">🏠</div>
-                <h3 class="font-bold text-lg mb-2">عمل مرن من بيتك</h3>
-                <p class="text-sm text-gray-600">تحكمي في وقتك واعملي بالوتيرة التي تناسب حياتك اليومية والعائلية.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                <div class="text-3xl mb-3">📈</div>
-                <h3 class="font-bold text-lg mb-2">أرباح ومكافآت مجزية</h3>
-                <p class="text-sm text-gray-600">نظام أرباح شفاف يضمن لكِ العائد المادي على قدر مجهودك وطموحك.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                <div class="text-3xl mb-3">🤝</div>
-                <h3 class="font-bold text-lg mb-2">تأطير ومتابعة شخصية</h3>
-                <p class="text-sm text-gray-600">فريق متكامل يقف بجانبك ويجيب على كافة استفساراتك خطوة بخطوة.</p>
-            </div>
+        <h2 class="section-title">🎥 تجربة حية ومباشرة لاستعمال المنتج</h2>
+        <div class="video-box">
+            <video controls poster="gel-balm.jpg">
+                <source src="varicose-demo.mp4" type="video/mp4">
+                المتصفح ديالك ما كيدعمش تشغيل الفيديو.
+            </video>
+            <p style="font-weight: bold; margin-top: 10px;">شاهد طريقة تطبيق جل كستناء الحصان والنتائج السريعة على عروق الدوالي ✨</p>
         </div>
-    </section>
 
-    <!-- زر واتساب عائم في الأسفل -->
-    <a href="https://wa.me/212600000000" target="_blank" 
-       class="fixed bottom-5 left-5 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50 flex items-center justify-center">
-        💬
-    </a>
+        <a href="https://api.whatsapp.com/send?phone=212674413270&text=مرحباً،%20بغيت%20نطلب%20المنتج%20أو%20ندخل%20معكم%20فالفريق" class="cta-btn" target="_blank">
+            🚀 اضغطي هنا للتواصل والانضمام
+        </a>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 text-center py-6 text-sm">
-        جميع الحقوق محفوظة © 2026
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 - فريق فيرونا</p>
     </footer>
 
 </body>
